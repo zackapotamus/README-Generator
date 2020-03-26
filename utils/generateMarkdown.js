@@ -47,6 +47,13 @@ To run tests, please run the following command:
 
 \`\`\`
 ${data.tests}
+\`\`\`
+
+## Questions
+
+${data.imgTag}
+
+If you have any questions about the repo, open an issue or contact [${data.username}]
 
 `;
 }
