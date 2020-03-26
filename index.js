@@ -1,3 +1,8 @@
+var inquirer = require('inquirer');
+var api = require("./utils/api.js");
+var gm = require('./utils/generateMarkdown.js');
+
+
 const questions = [{
         type: "input",
         name: "username",
@@ -37,15 +42,19 @@ const questions = [{
     },
     {
         type: "input",
-        name: "projectName",
+        name: "contributing",
         message: "What does the user need to know about contributing to the repo?"
     }
 ];
 
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+}
 
 function init() {
-
+    inquirer.prompt(questions).then(answers => {
+        console.log(JSON.stringify(answers, null, '  '));
+    });
 }
 
 init();
