@@ -54,7 +54,8 @@ const questions = [{
     {
         type: "input",
         name: "installation",
-        message: "What command should be run to install dependencies?"
+        message: "What command should be run to install dependencies?",
+        default: "npm install"
     },
     {
         type: "input",
@@ -74,15 +75,16 @@ const questions = [{
     }
 ];
 
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {
 
-}
+// }
 
 function init() {
     inquirer.prompt(questions).then(answers => {
         // answers: username, title, description, license, installation, tests, usage, contributing
         console.log(JSON.stringify(answers, null, '  '));
-        api.getUser(answers.username);
+        const apiData = api.getUser(answers);
+        console.log(apiData);
     });
 }
 

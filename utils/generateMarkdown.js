@@ -1,6 +1,5 @@
 function generateMarkdown(data) {
-  return `
-# ${data.title}
+  return `# ${data.title}
 ${data.badge}
 
 ## Description
@@ -51,9 +50,9 @@ ${data.tests}
 
 ## Questions
 
-${data.imgTag}
+<img src="${data.image}" alt="avatar" style="border-radius: 16px;" width="30" />
 
-If you have any questions about the repo, open an issue or contact [${data.username}]
+If you have any questions about the repo, open an issue or contact [${data.username}](${data.url}) at ${data.email}.
 
 `;
 }
