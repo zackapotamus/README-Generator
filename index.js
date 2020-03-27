@@ -84,7 +84,7 @@ function init() {
         // answers: username, title, description, license, installation, tests, usage, contributing
         console.log(JSON.stringify(answers, null, '  '));
         const apiData = api.getUser(answers);
-        console.log(apiData);
+        // console.log(apiData);
     });
 }
 

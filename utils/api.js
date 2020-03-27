@@ -11,7 +11,7 @@ const api = {
         answers.image = res.data.avatar_url;
         answers.url = res.data.url;
         answers.email = res.data.email;
-        console.log(answers);
+        // console.log(answers);
         const markdown = generateMarkdown(answers);
         writeToFile("README.md", markdown);
       })
