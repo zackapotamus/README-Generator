@@ -1,6 +1,6 @@
 function generateMarkdown(data) {
   return `# ${data.title}
-${data.badge}
+${data.license.badge}
 
 ## Description
 
